@@ -11,7 +11,7 @@
 #### Compiler and tool definitions shared by all build targets #####
 CCC = g++
 CXX = g++
-BASICOPTS = -m64
+BASICOPTS = -m64 -fopenmp
 CCFLAGS = $(BASICOPTS)
 CXXFLAGS = $(BASICOPTS)
 CCADMIN = 
@@ -26,8 +26,8 @@ all: $(TARGETDIR_neuro-fuzzy-simple)/neuro-fuzzy-simple
 ## Target: neuro-fuzzy-simple
 OBJS_neuro-fuzzy-simple =  \
 	$(TARGETDIR_neuro-fuzzy-simple)/main.o
-USERLIBS_neuro-fuzzy-simple = -fopenmp  $(SYSLIBS_neuro-fuzzy-simple) 
-DEPLIBS_neuro-fuzzy-simple =  -lomp
+USERLIBS_neuro-fuzzy-simple =  $(SYSLIBS_neuro-fuzzy-simple) 
+DEPLIBS_neuro-fuzzy-simple =  
 LDLIBS_neuro-fuzzy-simple = $(USERLIBS_neuro-fuzzy-simple)
 
 
@@ -38,9 +38,9 @@ $(TARGETDIR_neuro-fuzzy-simple)/neuro-fuzzy-simple: $(TARGETDIR_neuro-fuzzy-simp
 
 # Compile source files into .o files
 $(TARGETDIR_neuro-fuzzy-simple)/main.o: $(TARGETDIR_neuro-fuzzy-simple) main.cpp
-	$(COMPILE.cc) $(CCFLAGS_neuro-fuzzy-simple) $(CPPFLAGS_neuro-fuzzy-simple) -o $@ main.cpp
+	$(COMPILE.cc) $(CCFLAGS_neuro-fuzzy-simple) $(CPPFLAGS_neuro-fuzzy-simple) -o $@ main.cpp 
 
-
+        
 
 #### Clean target deletes all generated files ####
 clean:
