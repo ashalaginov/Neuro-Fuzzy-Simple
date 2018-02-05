@@ -39,3 +39,5 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 
+/neuralnetwork
+/neuralnetwork_cuda
