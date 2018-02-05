@@ -26,8 +26,8 @@ all: $(TARGETDIR_neuro-fuzzy-simple)/neuro-fuzzy-simple
 ## Target: neuro-fuzzy-simple
 OBJS_neuro-fuzzy-simple =  \
 	$(TARGETDIR_neuro-fuzzy-simple)/main.o
-USERLIBS_neuro-fuzzy-simple = -fopenmp -lomp $(SYSLIBS_neuro-fuzzy-simple) 
-DEPLIBS_neuro-fuzzy-simple =   
+USERLIBS_neuro-fuzzy-simple = -fopenmp  $(SYSLIBS_neuro-fuzzy-simple) 
+DEPLIBS_neuro-fuzzy-simple =  -lomp
 LDLIBS_neuro-fuzzy-simple = $(USERLIBS_neuro-fuzzy-simple)
 
 
