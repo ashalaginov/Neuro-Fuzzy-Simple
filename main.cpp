@@ -14,7 +14,6 @@
 
 #include <omp.h> //OpenMP
 
-
 //Include STL
 #include <string>
 #include <fstream>
