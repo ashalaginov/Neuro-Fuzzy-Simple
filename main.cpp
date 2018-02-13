@@ -40,7 +40,7 @@ float sigmoidFunction(float x) {
 }
 
 /**
- * Supplementary function for calculation oposit class label
+ * Supplementary function for calculation opposite class label
  * @param classID ID of the class: 0 or 1
  * @return opposite class ID
  */
@@ -417,7 +417,6 @@ int main(int argc, char** argv) {
             factClass0++;
         else if (classIDTest[i] == 0)
             factClass1++;
-
     }
 
     printf("\nAccuracy: %.2f %% Total %d Class %d act %d Class1 %d act %d \n", classificationAccuracy / inputTest.size() * 100, N, resClass0, factClass0, resClass1, factClass1);
